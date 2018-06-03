@@ -1,0 +1,79 @@
+
+article.scorecard
+    width: $scorecard-width
+    padding: 1rem
+    overflow: hidden
+    margin: 10px
+    
+    header
+        position: relative
+        height: 33rem
+        
+    select
+        width: 100%
+        padding: .25rem .5rem
+        font-size: 1.75rem
+        border: 1px solid #ccc
+        height: 4rem
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABPElEQVRYR+2UIUsEURRGz36uiPg7LAaLGCyiwaTVbDWIqCAYLIIgwoLIWsRotVrFYrEYDAaDP0MR/ZQnu7AsszNvZoQpb+qb797zzty5LRp+Wg33JwEkA8lAMlBkoA18/cOyGlknD6At6dL2MfBWA2Ja0q7tLcDDdYoMTEnq2j4BXitAzEjatr0DfGTliwBCZlLShe0O8FICYlbSZq/556hcDEDITvRMdIHnCIg5SRu294pmKBYg9ByXdG77CnjKgViQtG57H/gugi0DEGqFwTyzfQ08ZhRflLRm+yBr4KrOwHBuTFLH9g3wMHC4ImnJ9iHwU3Tz/nlZA/2cJJ3avgXugVVJ87aPyjQPxaoC/GUlhR1h2+9A+FWjb17XwGB+GbiLVV52EVWtG52r8wmim+S9mACSgWQgGWjcwC/a7VohVFDs8AAAAABJRU5ErkJggg==") 99%/10% no-repeat #eee
+        border-radius: 0
+
+    /*hide the default arrow in ie11 */
+    select::-ms-expand 
+        display: none
+    
+    img
+        margin-top: 5rem
+
+    .team
+        position: absolute
+        right: $team-logo-size/4
+        bottom: -$team-logo-size/2
+        height: $team-logo-size
+        width: $team-logo-size
+        font-size: 0
+        border-radius: 100%
+        background-color: white
+
+    section.stats
+        background-color: $stats-bg-color
+
+        h1
+            margin: 0
+            color:#fff
+            padding: 5rem 0 0 2rem
+            word-wrap: break-word
+
+        h3
+            margin: 0
+            color:#fff
+            padding: 1rem 2rem 2rem
+
+        ul
+            list-style: none
+            margin: 0
+            padding: 0 0 2rem
+
+            li
+                width: 90%
+                background-color: #E9EAEC
+                margin: .2rem 1.5rem
+                display: inline-block
+                height: $stats-list-height
+                box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.75)
+
+                dl
+                    line-height:  $stats-list-height
+                    display: inline
+                dt
+                    float: left
+                    margin: 0 1rem
+                    
+                dd
+                    float: right
+                    margin: 0 1rem
+                    font-weight: bold
+                    

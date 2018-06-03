@@ -1,0 +1,27 @@
+$class-prefix: "badge-icon-"
+$sprite-image-url: "./assets/badges_sprite.png"
+$sprite-grid-size: 100px
+
+/* list of badges need to displayed and its index value in sprite image */
+$icon-list: ("LeicesterCity",0,0) ("TottenhamHotspur", 10, 5) ("ManchesterCity", 7, 8) ("ManchesterUnited", 8, 6) ("Arsenal", 1, 1)
+
+@mixin icon($row, $column)
+  background-position: (-$column * $sprite-grid-size)   (-$row * $sprite-grid-size)
+
+[class*='#{$class-prefix}']
+  display: inline-block
+  width: $sprite-grid-size
+  height: $sprite-grid-size
+  background-image: url("/assets/badges_sprite.png")
+  background-repeat: no-repeat
+  border-radius: 15%
+  transform: scale(.75, 0.75)
+
+@each $icon in $icon-list
+  $name: nth($icon, 1)
+  $row: nth($icon, 2)
+  $column: nth($icon, 3)
+  .#{$class-prefix}#{$name}
+    +icon($row, $column)
+
+
