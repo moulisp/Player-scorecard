@@ -7,7 +7,7 @@ let playersList = [];
 
 //Array to maintain the list of stats displayed on the screen
 //each object have a title along with a getvalue function which handle the value calculation logic
-//Addition/removal of any object will make changes to the list displayed in html
+//Add/removal of any stats(object) will automatically render in the HTML
 //Example of data driven approach 
 let statsDisplayList = [{
     title: scorecardTemplate.appearanceTitle,
